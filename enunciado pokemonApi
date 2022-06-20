@@ -1,0 +1,48 @@
+Rotina de tratamento de dados utilizando a PokéAPI
+A prova prática consiste de um exercício de consumo, manipulação e apresentação de dados em Python.
+O objetivo é consumir uma API RESTful e manipular os dados de forma a apresentá-los em um gráfico.
+O programador deve consumir a PokéAPI (https://pokeapi.com), uma API de Pokémons, criaturas fictícias criadas pela Nintendo. Deve ser feita uma consulta a essa API, de modo a buscar os 20 primeiros pokémons e seus tipos, e apresentar a quantidade de pokémons por tipo em um gráfico de pizza.
+
+A tarefa consiste de quatro etapas principais:
+
+1 - Consumir a API para buscar os 20 primeiros pokemons da API (url: https://pokeapi.co/api/v2/pokemon?limit=20) e armazenar os dados em uma lista de dicionários Python, contendo nome e tipo do Pokémon. A url para buscar os dados de cada pokémon pode ser encontrado no campo 'url'  dos resultados da API. Os dados devem então ser formatados como no exemplo abaixo:
+
+[
+  {
+    'nome': 'bulbassaur',
+    'tipo': 'grass'
+  },
+  {
+    'nome': 'ivysaur',
+    'tipo': 'grass'
+  },
+]
+
+2 - Armazenar os dados em um dataframe utilizando a biblioteca Pandas (https://pandas.pydata.org/), uma ferramenta muito utilizada para manipulação e tratamento de dados em python. Um dataframe nada mais é do que uma forma de armazenar dados em formato tabular. Os dados devem ser armazenados em duas colunas, **nome** e **tipo**, de acordo com a lista de dicionários gerada no passo anterior. Exemplo:
+
+ 	  nome 	        tipo
+0 	bulbasaur 	grass
+1 	ivysaur 	        grass
+2 	venusaur 	grass
+...
+
+3 - Agrupar os dados de acordo com o tipo e armazenar a contagem de acordo com a quantidade de tipos em um novo dataframe. O dataframe resultante deve ter a seguinte estrutura:
+ 	        
+tipo 	   nome
+bug 	   10
+electric 	   2
+fairy 	   2
+fire 	           5
+...
+
+4 - Apresentar esses dados agrupados em um gráfico pizza, utilizando o método **plot.pie** dos dataframes do Pandas, da seguinte forma (utilizando, por exemplo, um dataframe chamado dataframepokemons):
+
+dataframepokemons.plot.pie(y='nome')
+
+Ao final dos quatro passos, deve ser possível visualizar a frequência de tipos para os 20 primeiros pokemons retornados pela API.
+
+A atividade avaliará cada um dos 4 tópicos individualmente, e o candidato não será penalizado caso não consiga realizar a tarefa por inteiro. Envie mesmo que incompleto, lembrando que o envio será finalizado às 18h
+
+A atividade pode ser entregue em um arquivo python (.py) ou em um arquivo Jupyter Notebook (.ipynb). Caso opte pela segunda opção, recomenda-se o uso da ferramenta Google Collab (https://colab.research.google.com/), visto que é possível executar um ambiente Jupyter Notebook em uma máquina na nuvem, e não é necessário instalar as bibliotecas do Python.
+Caso opte por realizar a atividade diretamente em um arquivo Python, recomenda-se utilizar apenas as bibliotecas **requests** e **pandas**, além das bibliotecas padrão disponibilizadas com a linguagem. Caso seja realmente necessário utilizar outras bibliotecas, forneça também um arquivo **requirements.py** com as bibliotecas instaladas. Caso mais de um arquivo seja utilizado, envie um arquivo .zip com todos os arquivos necessários para execução do seu programa (além de qualquer documentação que julgar necessária).
+
