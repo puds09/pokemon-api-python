@@ -5,7 +5,7 @@
 ##
 
 <h3> How To Run</h3>
-  ⚙️ To see the apliccation working, upload the ![notebook](https://github.com/puds09/pokemon-api-python/blob/main/pokemonApi.ipynb) file in ![site](https://colab.research.google.com)
+  ⚙️ To see the apliccation working, upload the ![notebook](https://github.com/puds09/pokemon-api-python/blob/main/pokemonApi.ipynb) file in this ![site](https://colab.research.google.com)
 
 ##
 
